@@ -1,0 +1,29 @@
+<div class="w3-bar  w3-teal  w3-animate-left">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-mobile w3-right" [routerLink]="['/login']">Signin</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-mobile w3-right" [routerLink]="['/register']">Signup</a>
+  </div>
+
+<div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-col m5 w3-display-middle ">
+                <div class="w3-card-4 w3-animate-zoom ">
+                    <div class="w3-container">
+                      <h2 class="w3-text-teal">Register</h2>
+                    </div>
+                    <form [formGroup]="authservice.userform" (submit)="onSubmit()" class="w3-container">
+                      <p>      
+                      <label class="w3-text-teal"><b>Email Address</b></label>
+                      <input style="background-color: transparent" formControlName="email" class="w3-input w3-text-black w3-border-bottom" name="email" type="email"></p>
+                      <p>      
+                      <label class="w3-text-teal"><b>Password</b></label>
+                      <input style="background-color: transparent" formControlName="password" class="w3-input w3-text-black w3-border-bottom" name="password" type="password"></p>
+                    
+                      <p>
+                      
+                      <button [disabled]="authservice.userform.invalid" class="w3-btn w3-teal">Register</button></p>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    

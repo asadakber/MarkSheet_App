@@ -1,0 +1,26 @@
+<div class="w3-bar  w3-teal  w3-animate-left">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-mobile w3-left">Marksheet View</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-mobile w3-right" [routerLink]="['/dashboard']">Back</a>
+  </div>
+
+  <div class="w3-container"> 
+      <div class="w3-row">
+          <div class="w3-col m5 w3-display-middle ">
+            <ul class="w3-ul w3-card-4" >
+                <em><li><strong>Name: </strong>{{ (mark | async)?.name }}</li></em>
+                <em><li><strong>Age: </strong>{{ (mark | async)?.age }}</li></em>
+                <em><li><strong>Math Marks: </strong>{{ (mark | async)?.math }}</li></em>
+                <em><li><strong>Physics Marks: </strong>{{ (mark | async)?.Physics }}</li></em>
+                <em><li><strong>English Marks: </strong>{{ (mark | async)?.English }}</li></em>
+                <em><li><strong>PakStudies Marks: </strong>{{ (mark | async)?.PakStudies }}</li></em>
+                <em><li><strong>Urdu Marks: </strong>{{ (mark | async)?.Urdu }}</li></em>
+                <em><li><strong>Islamiat Marks: </strong>{{ (mark | async)?.Islamiat }}</li></em>
+                <em><li class="w3-text-teal"><strong>Total Marks: </strong>{{ (mark | async)?.totalmarks }}</li></em>
+                <em><li class="w3-text-red"><strong>Percentage: </strong>{{ (mark | async)?.percentage }}%</li></em>
+  
+              </ul>
+          </div>
+      </div>
+  </div>
+      
+   
